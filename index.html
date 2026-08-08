@@ -1,1 +1,1060 @@
- 
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>Antos Maman | Senior & Lead React Native Developer | Mobile Architect</title>
+  <meta name="title" content="Antos Maman | Senior & Lead React Native Developer | Mobile Architect">
+  <meta name="description" content="Portfolio of Antos Maman, Senior & Lead React Native Developer with nearly 10 years of experience building scalable iOS and Android mobile applications, authoring NPM packages, and leading mobile architecture.">
+  <meta name="keywords" content="React Native Developer, Lead Mobile Engineer, Senior React Native Developer, iOS Android Engineer, Mobile Architect, TypeScript, GraphQL, NPM Creator, AI Developer Tools">
+  <meta name="author" content="Antos Maman">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://antosmaman.github.io/">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://antosmaman.github.io/">
+  <meta property="og:title" content="Antos Maman | Senior & Lead React Native Developer">
+  <meta property="og:description" content="Lead & Senior React Native Engineer with 10 years experience building 13+ production mobile apps and authoring 7 published open-source NPM packages.">
+  <meta property="og:image" content="https://antosmaman.github.io/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://antosmaman.github.io/">
+  <meta property="twitter:title" content="Antos Maman | Senior & Lead React Native Developer">
+  <meta property="twitter:description" content="Lead & Senior React Native Engineer with 10 years experience building 13+ production mobile apps and authoring 7 published open-source NPM packages.">
+  <meta property="twitter:image" content="https://antosmaman.github.io/og-image.jpg">
+
+  <!-- Structured Data (Schema.org for Google Search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Antos Maman",
+    "jobTitle": "Lead / Senior React Native Developer",
+    "url": "https://antosmaman.github.io/",
+    "sameAs": [
+      "https://github.com/antosmamanktr",
+      "https://linkedin.com/in/antosmaman",
+      "https://www.npmjs.com/~antosmaman"
+    ],
+    "knowsAbout": [
+      "React Native",
+      "TypeScript",
+      "JavaScript",
+      "GraphQL",
+      "Redux Toolkit",
+      "iOS Development",
+      "Android Development",
+      "Mobile App Architecture",
+      "CI/CD Pipelines"
+    ]
+  }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables & Theme Setup */
+    :root[data-theme="dark"] {
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --badge-bg: #1e293b;
+      --badge-border: rgba(56, 189, 248, 0.25);
+      --code-bg: #090d16;
+    }
+
+    :root[data-theme="light"] {
+      --bg-dark: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.15);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --badge-bg: #f0f9ff;
+      --badge-border: rgba(2, 132, 199, 0.25);
+      --code-bg: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    :root[data-theme="light"] header {
+      background: rgba(248, 250, 252, 0.85);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+    }
+
+    .hero {
+      padding: 90px 0 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background-color: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin-bottom: 32px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      text-decoration: none;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-card-hover);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 40px;
+      height: 3px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .metric-card h3 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .metric-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .skills-group {
+      margin-bottom: 24px;
+    }
+
+    .skills-group h3 {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-family: 'Fira Code', monospace;
+      color: var(--accent);
+      background: var(--accent-glow);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .store-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #000000;
+      color: #ffffff !important;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      width: fit-content;
+    }
+
+    .store-link:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .npm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .npm-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .npm-card h3 {
+      font-size: 1.15rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .npm-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .npm-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .code-box {
+      background: var(--code-bg);
+      color: #f8fafc;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--border);
+    }
+
+    .hobby-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hobby-icon {
+      font-size: 3rem;
+      background: var(--accent-glow);
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--badge-border);
+    }
+
+    .hobby-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hobby-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .hobby-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 28px;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .timeline-role {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .timeline-company {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .timeline-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .timeline-bullets {
+      list-style-type: disc;
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .timeline-bullets li {
+      margin-bottom: 8px;
+    }
+
+    .contact-wrapper {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .contact-wrapper p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+      font-size: 1.1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+      }
+
+      .hobby-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Antos<span>.dev</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#npm">NPM Packages</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#hobby">Beyond Code</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span id="themeIcon">☀️</span> <span id="themeText">Light</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="hero-badge">🟢 Open to Senior & Lead Remote / Hybrid Roles</span>
+      <h1>Antos Maman</h1>
+      <h2>Senior & Lead React Native Developer | Mobile Architect</h2>
+      <p>
+        Building scalable, high-performance cross-platform mobile applications for iOS and Android. Nearly 10 years of software development experience with 8+ years specializing in React Native, TypeScript, GraphQL, and custom open-source ecosystem tools.
+      </p>
+      <div class="hero-ctas">
+        <a href="#apps" class="btn btn-primary">View Released Apps</a>
+        <a href="#npm" class="btn btn-secondary">📦 7 Published NPM Packages</a>
+        <a href="https://linkedin.com/in/antosmaman" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile</a>
+        <a href="https://github.com/antosmamanktr" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+      </div>
+    </section>
+
+    <!-- Career Metrics Section -->
+    <section id="about">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>10</h3>
+          <p>Years Tech Experience</p>
+        </div>
+        <div class="metric-card">
+          <h3>8+</h3>
+          <p>Years React Native</p>
+        </div>
+        <div class="metric-card">
+          <h3>13+</h3>
+          <p>Production Apps Delivered</p>
+        </div>
+        <div class="metric-card">
+          <h3>7</h3>
+          <p>NPM Packages Authored</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Technical Expertise & Core Stack</h2>
+      
+      <div class="skills-group">
+        <h3>Core Mobile Frameworks & Languages</h3>
+        <div class="badge-container">
+          <span class="skill-badge">React Native</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">JavaScript (ES6+)</span>
+          <span class="skill-badge">Kotlin (Android)</span>
+          <span class="skill-badge">Swift (iOS)</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>AI-Assisted Engineering & Workflows</h3>
+        <div class="badge-container">
+          <span class="skill-badge">AI-Driven Coding</span>
+          <span class="skill-badge">LLM Integration</span>
+          <span class="skill-badge">GitHub Copilot</span>
+          <span class="skill-badge">Prompt Engineering</span>
+          <span class="skill-badge">Automated Testing Assistance</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>State & API Data Layer</h3>
+        <div class="badge-container">
+          <span class="skill-badge">GraphQL</span>
+          <span class="skill-badge">Apollo Client</span>
+          <span class="skill-badge">Redux Toolkit</span>
+          <span class="skill-badge">Context API</span>
+          <span class="skill-badge">REST APIs</span>
+          <span class="skill-badge">Axios</span>
+          <span class="skill-badge">Offline Storage & Sync</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Architecture, DevOps & Tooling</h3>
+        <div class="badge-container">
+          <span class="skill-badge">Clean Architecture</span>
+          <span class="skill-badge">Reusable UI Design Systems</span>
+          <span class="skill-badge">Performance Optimization</span>
+          <span class="skill-badge">Firebase Ecosystem</span>
+          <span class="skill-badge">App Store & Play Store Publishing</span>
+          <span class="skill-badge">CI/CD Pipelines</span>
+          <span class="skill-badge">Jest Unit Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Published Mobile Apps Section -->
+    <section id="apps">
+      <h2 class="section-title">Featured Production Applications</h2>
+      <p style="color: var(--text-muted); margin-bottom: 28px;">Applications designed, developed, and maintained across ecommerce, retail, and enterprise domain sectors.</p>
+
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div>
+            <h3>BuyGo Ecommerce</h3>
+            <p>Cross-platform e-commerce application featuring secure authentication, shopping cart, order management, GraphQL/REST APIs, and push notifications.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Redux Toolkit</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.buygrobuyer" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Pantaloons Retail</h3>
+            <p>Enterprise retail application built with reusable architecture, Firebase integration, deep linking, and performance optimization for a seamless shopping experience.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Deep Linking</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.pantaloons" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Galeries Lafayette</h3>
+            <p>Luxury retail application featuring scalable navigation, GraphQL integration, modular architecture, and optimized user experience.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Modular UI</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.galerieslafayette.abfrl" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>QCONZ SYNC</h3>
+            <p>Offline-first enterprise solution enabling businesses to create, deploy, and synchronize digital forms for online and offline field data collection.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Offline Storage</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.Qconz.SyncApp" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Oceania Milk Quality Analyser</h3>
+            <p>Analytics application providing real-time milk production and quality insights with seasonal comparisons, alerts, and interactive dashboards.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Analytics</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.qconz.oceania" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Virtual Coach</h3>
+            <p>Interactive eLearning platform delivering engaging multimedia training modules and progress-based learning experiences.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">eLearning</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.Qconz.VirtualCoach" target="_blank" rel="noopener" class="store-link">
+            ▶ Get it on Google Play
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Published NPM Packages Section -->
+    <section id="npm">
+      <h2 class="section-title">Published Open-Source NPM Packages</h2>
+      <p style="color: var(--text-muted); margin-bottom: 24px;">Author and maintainer of open-source React Native libraries to solve complex UI and mobile API challenges.</p>
+
+      <div class="npm-grid">
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.1</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-stonewall-grid</h3>
+            <p>A performant and customizable masonry-style layout for React Native.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-stonewall-grid</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.1</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-letter-flatlist</h3>
+            <p>A performant and customizable Alphabet Section List for React Native applications.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-letter-flatlist</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.0</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-dream-toast</h3>
+            <p>A customizable, theme-ready toast system for React Native with queueing, safe-area support, swipe to dismiss, and modal compatibility.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-dream-toast</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.2</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-input-suggestion</h3>
+            <p>A customizable React Native TextInput with inline suggestion, auto-complete, and swipe-to-fill or tap-to-fill functionality.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-input-suggestion</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.1</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-sms-consent-api</h3>
+            <p>A lightweight React Native module for Android's SMS User Consent API. Retrieve verification codes from SMS without full permissions.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-sms-consent-api</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v1.0.0</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-multi-range-slider</h3>
+            <p>Highly customizable and smooth React Native multi range slider with vertical, single, and dual support.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-multi-range-slider</code>
+          </div>
+        </div>
+
+        <div class="npm-card">
+          <div>
+            <div class="npm-meta">
+              <span>v0.0.2</span>
+              <span>Published on NPM</span>
+            </div>
+            <h3>react-native-smooth-collapse</h3>
+            <p>High performance collapsible & accordion for React Native built using Reanimated.</p>
+          </div>
+          <div class="code-box">
+            <code>npm i react-native-smooth-collapse</code>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="https://www.npmjs.com/~antosmaman" target="_blank" rel="noopener" class="btn btn-primary">
+          📦 View Official NPM Profile (~antosmaman)
+        </a>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Senior Software Engineer (Mobile Lead)</div>
+              <div class="timeline-company">IT Services & Enterprise Consulting</div>
+            </div>
+            <div class="timeline-date">Aug 2022 – Present</div>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Architected, developed, and maintained production-grade cross-platform mobile applications using React Native and TypeScript.</li>
+            <li>Built scalable reusable components, complex UI flows, and navigation systems following modular clean architecture.</li>
+            <li>Integrated GraphQL and REST APIs, ensuring reliable client-side data handling and efficient networking.</li>
+            <li>Optimized application rendering, startup performance, memory usage, and overall user experience across Android & iOS.</li>
+            <li>Led code reviews, mentored junior developers, and promoted clean architecture and modern engineering standards.</li>
+            <li>Managed App Store and Google Play releases using automated CI/CD pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Senior Software Engineer</div>
+              <div class="timeline-company">Sprintline Software Pvt Ltd</div>
+            </div>
+            <div class="timeline-date">Jul 2017 – Jul 2022</div>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Developed and maintained 10+ production React Native applications for Android and iOS platforms.</li>
+            <li>Implemented complex UI workflows and custom reusable component design systems.</li>
+            <li>Integrated GraphQL and REST APIs for enterprise-grade mobile application ecosystems.</li>
+            <li>Utilized Redux Toolkit for centralized state management and optimized application performance.</li>
+            <li>Executed unit testing with Jest and led production support and stability investigations.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Software Engineer</div>
+              <div class="timeline-company">Anathoth IT Solutions</div>
+            </div>
+            <div class="timeline-date">Jun 2016 – Jun 2017</div>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Developed web applications using ASP.NET and modern web development technologies.</li>
+            <li>Built hybrid mobile applications leveraging cross-platform hybrid frameworks.</li>
+            <li>Designed and implemented responsive, user-friendly frontend interfaces.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Beyond Code Section -->
+    <section id="hobby">
+      <h2 class="section-title">Beyond Code</h2>
+      <div class="hobby-card">
+        <div class="hobby-icon">📷</div>
+        <div class="hobby-content">
+          <h3>Wildlife Photographer</h3>
+          <p>When I'm not architecting React Native applications or writing open-source modules, I spend time in nature as a passionate wildlife photographer. Observing wildlife requires immense patience, sharp focus, and attention to detail—qualities that directly influence my meticulous approach to software craftsmanship and code optimization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-wrapper">
+        <h2 class="section-title" style="display: block;">Get In Touch</h2>
+        <p>Currently open to discussing Senior & Lead React Native roles, mobile architecture, or high-impact consulting opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:antosmamanktr@gmail.com" class="btn btn-primary">✉ antosmamanktr@gmail.com</a>
+          <a href="https://linkedin.com/in/antosmaman" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile</a>
+          <a href="https://github.com/antosmamanktr" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Antos Maman. All rights reserved. Senior & Lead React Native Developer.</p>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      
+      document.getElementById('themeIcon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      document.getElementById('themeText').textContent = newTheme === 'dark' ? 'Light' : 'Dark';
+    }
+  </script>
+
+</body>
+</html>
